@@ -28,4 +28,4 @@ jobs:
     - name: Create the gem
       run: gem build ruby-bacon/ruby-bacon.gemspec
     - name: Publish the package
-      run: gem push ruby-bacon/*.gem --key github --host https://rubygems.pkg.github.com/infin8x --config-file ruby-bacon/credentials
+      run: gem push ruby-bacon/*.gem --key github --host https://rubygems.pkg.github.com/bbq-beets --config-file ruby-bacon/credentials
