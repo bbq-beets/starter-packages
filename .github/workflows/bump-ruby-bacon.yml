@@ -18,7 +18,7 @@ jobs:
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
         git checkout master
-        sed -i -e 's/SHA/'$(head /dev/urandom | tr -dc A-Za-z0-9 | head -c20)'/g' ruby-bacon/ruby-bacon.gemspec
+        sed -i -e 's/"1\.0\.1\.[[:alnum:]]*"/"1.0.1.'$(head /dev/urandom | tr -dc A-Za-z0-9 | head -c20)'"/g' ruby-bacon/ruby-bacon.gemspec
         git commit -m "Add changes" -a
     - name: Push changes
       uses: ad-m/github-push-action@master
