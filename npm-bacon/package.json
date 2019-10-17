@@ -1,10 +1,10 @@
 {
-  "name": "@reybard/npm-bacon",
+  "name": "@bbq-beets/npm-bacon",
   "version": "1.0.4",
   "description": "The most tasty package ever, now for npm.",
   "repository": {
     "type": "git",
-    "url": "git://github.com/infin8x/starter-packages.git"
+    "url": "git://github.com/bbq-beets/starter-packages.git"
   },
   "publishConfig": {
     "registry":"https://npm.pkg.github.com"
