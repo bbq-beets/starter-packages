@@ -17,6 +17,7 @@ jobs:
       run: sed -i -e 's/SHA/'$(head /dev/urandom | tr -dc A-Za-z0-9 | head -c20)'/g' ruby-bacon/ruby-bacon.gemspec
     - name: Commit files
       run: |
+        git checkout master
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
         git commit -m "Add changes" -a
