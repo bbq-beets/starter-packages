@@ -24,3 +24,15 @@ jobs:
       uses: ad-m/github-push-action@master
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
+    - name: Setup Ruby
+      uses: actions/setup-ruby@v1
+      with:
+        ruby-version: 2.x
+    - name: Add GPR token to template credentials file
+      run: sed -i -e 's/TOKEN/'$GITHUB_TOKEN'/g' ruby-bacon/credentials
+      env:
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+    - name: Build the gem
+      run: gem build ruby-bacon/ruby-bacon.gemspec
+    - name: Publish the package
+      run: gem push ruby-bacon/*.gem --key github --host https://rubygems.pkg.github.com/bbq-beets --config-file ruby-bacon/credentials
