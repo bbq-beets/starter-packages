@@ -20,9 +20,7 @@ jobs:
       with:
         ruby-version: 2.x
     - name: Add GPR token to template credentials file
-      run: |
-        sed -i -e 's/SHA/'$(head /dev/urandom | tr -dc A-Za-z0-9 | head -c20)'/g' ruby-bacon/ruby-bacon.gemspec
-        sed -i -e 's/TOKEN/'$GITHUB_TOKEN'/g' ruby-bacon/credentials
+      run: sed -i -e 's/TOKEN/'$GITHUB_TOKEN'/g' ruby-bacon/credentials
       env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
     - name: Create the gem
