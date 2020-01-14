@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
     s.name = %q{ruby-bacon}
-    s.version = "1.0.1.u1QLvCGB1imalMX0RZJw"
+    s.version = "1.0.1.ChrDQcc27R7CEfEQgc2u"
     s.date = %q{2011-09-29}
     s.summary = %q{ruby-bacon is the classiest bacon}
     s.authors = %q{infin8x}
